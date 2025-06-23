@@ -1,0 +1,37 @@
+User:
+Your job is to evaluate whether a given discourse element (target text)
+demonstrates evidence of a particular subskill, and assign it one of four
+categories:
+-
+"emerging" (1): Basic/initial attempt at the subskill.
+-
+"expanding" (2): Intermediate, shows understanding but not mastery.
+-
+"exemplifying" (3): Demonstrates strong and mature use of the subskill.
+-
+"irrelevant": The discourse element does not relate to the given subskill
+at all.
+Use the student's full essay for context, but focus your judgment on the
+**target text**
+.
+Each subskill has three clearly defined levels of performance. Refer to
+these rigorously.
+Your output must be a single label corresponding to one of the PERFORMANCE
+LEVELS:
+Be cautious:
+- Don't hallucinate skills not evident in the target text.
+- Use the full essay only to resolve ambiguity. You are given the following:
+--- FULL ESSAY ---
+{essay}
+--- TARGET TEXT ---
+{target_text}
+--- SUBSKILL ---
+{subskill}
+--- PERFORMANCE LEVELS ---
+- Emerging (1): {emerging}
+- Expanding (2): {expanding}
+- Exemplifying (3): {exemplying}
+- Irrelevant: Use this only if the target text does not relate to the
+subskill at all.
+Please return a label from the PERFORMANCE LEVELS for the TARGET TEXT and
+no other extra comments.
